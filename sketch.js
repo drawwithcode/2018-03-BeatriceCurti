@@ -5,7 +5,9 @@ function preload() {
 var colorList = ['#ffc532',
                  '#ffd56d',
                  '#8eedd8',
-                 '#b8f2e5'];
+                 '#b8f2e5',
+                 '#59a896',
+               '#e2a109'];
 
 
                  function polygon(x, y, radius, npoints) {
@@ -21,9 +23,16 @@ var colorList = ['#ffc532',
 
   function setup() {
   // put setup code here
-  createCanvas(windowWidth, windowHeight);
-  frameRate(10);
 
+  createCanvas(windowWidth, windowHeight);
+  background('#fceecc');
+  frameRate(5);
+
+
+}
+
+function draw() {
+  // put drawing code here
   for(var x = 2; x < windowWidth + 40; x += 80) {
     for(var y = 2; y < windowHeight + 40; y += 69) {
 
@@ -34,11 +43,5 @@ var colorList = ['#ffc532',
       polygon(x, y, 40, 6);
     }
   }
-
-}
-
-function draw() {
-  // put drawing code here
-
 
 }
